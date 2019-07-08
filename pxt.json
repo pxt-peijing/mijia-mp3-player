@@ -10,7 +10,7 @@
         "namespace.ts",
         "README.md",
         "mp3.ts",
-        "_locales/zh/MakerBit-MP3-strings.json"
+        "_locales/de/MakerBit-MP3-strings.json"
     ],
     "testFiles": [
         "test.ts"
