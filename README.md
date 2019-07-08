@@ -2,30 +2,25 @@
 
 [![Build Status](https://travis-ci.org/1010Technologies/pxt-makerbit-mp3.svg?branch=master)](https://travis-ci.org/1010Technologies/pxt-makerbit-mp3)
 
-MakeCode extension for Serial MP3 players with the YX5300 chip.
+米加智造音乐播放器扩展。
 
-## MakerBit Board
+## 说明
 
-The MakerBit connects to the BBC micro:bit to provide easy connections to a wide variety of sensors, actuators and other components, for example a Serial MP3 player.
+米加盒子提供micro:bit所有周边产品，包括micr:bit主板、扩展板、传感器、显示设备、电机、舵机及输入输出附件。
+通过音乐播放模块，配合micro:bit，可以制作一个MP3播放器，实现音乐播放的功能，包括播放、暂停、上一区、下一区、音量调节，并且可以与音箱相连接。
 
-http://makerbit.com/
+https://www.mijiahezi.com/microbit-mp3-player.html
+                                |
 
-| ![MakerBit](https://github.com/1010Technologies/pxt-makerbit/raw/master/MakerBit.png "MakerBit") | ![MakerBit+R](https://github.com/1010Technologies/pxt-makerbit/raw/master/MakerBit+R.png "MakerBit+R") |
-| :----------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------: |
-|                                            _MakerBit_                                            |                                   _MakerBit+R with motor controller_                                   |
+## 功能说明
 
-## Serial MP3
+音乐模块需要配合micr SD卡使用，使用前请将SD卡格式化为FAT32，另外，文件夹及文件名请遵循如下的结构和标准：
 
-This extension supports MP3 devices with the YX5300 chip, e.g. the Catalex Serial MP3.
 
-The microSD card shall be formatted as FAT16 or FAT32. exFAT is not supported properly and shall be avoided.
+- 文件夹必须是两位的数字, 例如： `01`。（不包括引号）
+- 文件夹内的音频文件名称必须是3位数字开头，例如： `001.mp3`（不包括引号），支持mp3、wav两种文件格式。
 
-To support all commands properly, the names of folders and files need to obey the following strict pattern:
-
-- Directory names are two-digit numbers, e.g. `01`.
-- Track names within the directories shall start with a three digit numbers such as `001.mp3` or `002.wav`
-
-Up to 99 directories and 255 tracks per directory are supported.
+最多支持99个文件夹，255个音频文件。
 
 ```
 ├── 01/
@@ -39,95 +34,10 @@ Up to 99 directories and 255 tracks per directory are supported.
 …
 ```
 
-The MP3 device reads files and folders in alphabetic order. It is required to create a sequence of folders like `01`, `02`, `03` and name the tracks within each folder starting at `001`. Make sure to avoid gaps in your number based naming scheme. This allows you to use folder and track names as parameters in the playback functions below.
+MP3音频播放模块根据字母顺序读取文件和文件夹，需要提前创建好文件夹，如：01、02、03等，并从001开始命名文件夹中的音频文件曲目，顺序中不能出现跳跃，一定要按照顺序，因为这些名称可以用在扩展中的功能调用中。
 
-If you experience playback problems, check for deviations to the naming convention and the file system format.
+如果在播放过程中有问题，请检查全名是否有问题。
 
-### MakerBit connectSerialMp3
-
-Connects to the Serial MP3 device. The first pin needs to be attached the MP3 device receiver pin (RX) and the second pin to the MP3 device transmitter pin (TX).
-
-```sig
-makerbit.connectSerialMp3(DigitalPin.P0, DigitalPin.P1)
-```
-
-### MakerBit playMp3TrackFromFolder
-
-Plays a track from a folder.
-
-```sig
-makerbit.playMp3TrackFromFolder(1, 1, Mp3Repeat.No)
-```
-
-### MakerBit playMp3Folder
-
-Plays all tracks in a folder.
-
-```sig
-makerbit.playMp3Folder(1, Mp3Repeat.No)
-```
-
-### MakerBit setMp3Volume
-
-Sets the volume.
-
-```sig
-makerbit.setMp3Volume(30)
-```
-
-### MakerBit runMp3Command
-
-Dispatches a command to the MP3 device.
-
-```sig
-makerbit.runMp3Command(Mp3Command.PLAY_NEXT_TRACK)
-```
-
-### MakerBit onMp3TrackStarted
-
-Do something when a MP3 track is started.
-
-```sig
-makerbit.onMp3TrackStarted(() => {})
-```
-
-### MakerBit onMp3TrackCompleted
-
-Do something when a MP3 track is completed.
-
-```sig
-makerbit.onMp3TrackCompleted(() => {})
-```
-
-### MakerBit mp3Folder
-
-Returns the index of the selected MP3 folder.
-
-```sig
-makerbit.mp3Folder()
-```
-
-### MakerBit mp3Track
-
-Returns the index of the last MP3 track event.
-
-```sig
-makerbit.mp3Track()
-```
-
-### MakerBit mp3Volume
-
-Returns the MP3 volume.
-
-```sig
-makerbit.mp3Volume()
-```
-
-## License
-
-Licensed under the MIT License (MIT). See LICENSE file for more details.
-
-## Supported targets
 
 - for PXT/microbit
 # mijia-mp3-player
