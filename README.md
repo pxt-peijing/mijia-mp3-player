@@ -2,12 +2,13 @@
 
 [![Build Status](https://travis-ci.org/1010Technologies/pxt-makerbit-mp3.svg?branch=master)](https://travis-ci.org/1010Technologies/pxt-makerbit-mp3)
 
-米加智造音乐播放器扩展。
+米加智造micro:bit音乐播放器模块。
 
 ## 说明
 
 米加盒子提供micro:bit所有周边产品，包括micr:bit主板、扩展板、传感器、显示设备、电机、舵机及输入输出附件。
-通过音乐播放模块，配合micro:bit，可以制作一个MP3播放器，实现音乐播放的功能，包括播放、暂停、上一区、下一区、音量调节，并且可以与音箱相连接。
+
+米加智造micro:bit音乐播放器模块，配合micro:bit，可以制作一个MP3播放器，实现音乐播放的功能，包括播放、暂停、上一区、下一区、音量调节，并且可以与音箱相连接。
 
 https://www.mijiahezi.com/microbit-mp3-player.html
                                 |
