@@ -1,6 +1,4 @@
-# MakerBit MP3
-
-[![Build Status](https://travis-ci.org/1010Technologies/pxt-makerbit-mp3.svg?branch=master)](https://travis-ci.org/1010Technologies/pxt-makerbit-mp3)
+# 米加智造micro:bit音乐播放器模块
 
 米加智造micro:bit音乐播放器模块。
 
