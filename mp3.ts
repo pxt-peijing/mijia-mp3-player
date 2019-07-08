@@ -137,7 +137,7 @@ namespace makerbit {
    * @param mp3RX MP3 device receiver pin (RX), eg: DigitalPin.P0
    * @param mp3TX MP3 device transmitter pin (TX), eg: DigitalPin.P1
    */
-  //% 
+  //% subcategory="MP3"
   //% blockId="makerbit_mp3_connect" block="connect MP3 device with MP3 RX attached to %mp3RX | and MP3 TX to %mp3TX"
   //% mp3RX.fieldEditor="gridpicker" mp3RX.fieldOptions.columns=3
   //% mp3RX.fieldOptions.tooltips="false"
