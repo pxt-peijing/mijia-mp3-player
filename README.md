@@ -39,4 +39,4 @@ MP3音频播放模块根据字母顺序读取文件和文件夹，需要提前�
 
 如果在播放过程中有问题，请检查全名是否有问题。
 
-通过micro:bit技术支持社区提问，https://www.mijiahezi.com/https://www.mijiahezi.com/community
+通过micro:bit技术支持社区提问，https://www.mijiahezi.com/community
