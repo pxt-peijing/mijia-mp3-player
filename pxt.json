@@ -10,7 +10,8 @@
         "namespace.ts",
         "README.md",
         "mp3.ts",
-        "_locales/zh/MakerBit-MP3-strings.json"
+        "_locales/zh/mijia-mp3-player-strings.json",
+        "_locales/zh/mijia-mp3-player-jsdoc-strings.json"
     ],
     "testFiles": [
         "test.ts"
