@@ -16,12 +16,12 @@
   "makerbit.mp3Volume|block": "音乐音量",
   "makerbit.onMp3TrackCompleted|block": "当播放完成时",
   "makerbit.onMp3TrackStarted|block": "当播放开始时",
-  "makerbit.playMp3Folder|block": "play MP3 folder %folder | %repeat",
-  "makerbit.playMp3TrackFromFolder|block": "播放第 %track | 典，文件夹为 %folder | %repeat",
-  "makerbit.playMp3Track|block": "播放第 %track | ，文件夹为 %folder ，直到播放结束",
+  "makerbit.playMp3Folder|block": "播放文件夹 %folder | %repeat",
+  "makerbit.playMp3TrackFromFolder|block": "播放第 %track | 首，文件夹为 %folder | %repeat",
+  "makerbit.playMp3Track|block": "播放第 %track | 首，文件夹为 %folder ，直到播放结束",
   "makerbit.runMp3Command|block": "MP3 %command",
   "makerbit.setMp3Volume|block": "设置音量为 %volume",
   "makerbit|block": "米加智造",
   "{id:category}Makerbit": "米加智造",
-  "{id:category}MP3": "...音频播放"
+  "{id:category}MP3": "...音乐播放"
 }
